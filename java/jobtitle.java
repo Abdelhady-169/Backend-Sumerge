@@ -1,7 +1,7 @@
 public class jobtitle {
 
     private String jobtitle;
-    private int count = 0;
+    private int count;
 
     public jobtitle(String stringa){
         this.jobtitle = stringa;
