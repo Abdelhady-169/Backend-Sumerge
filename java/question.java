@@ -23,14 +23,15 @@ public class question {
 
         printFinal();
 	}
+
     //for every jobtitle in jobtitleArray checks entire employees list and preforms functions
     private static void checkAll(List<employee> employees, List<jobtitle> jobtitleArray){
         for (int i = 0; i < jobtitleArray.size(); i++ ){
             for (int j = 0; j <employees.size(); j++){
-                if (jobtitleArray.get(i).jobtitleExist()=="false"){ //jobtitleExist checks if jobtitle already entered in jtArray
-                    jobtitleArray.get(i).jobtitleCreate()==employees.get(i).title; //if it doesn't exist them it creates jobtitle object with given title and counts first employee
+                if (!jobtitleExist(jobtitleArray.get(i))){ //jobtitleExist checks if jobtitle already entered in jtArray
+                    jobtitleArray.get(i).jobtitleCreate(employees.get(i).title); //if it doesn't exist them it creates jobtitle object with given title and counts first employee
                 }
-                jobtitleArray.get(i).jobtitleUpdate(); //if jobtitle already exists in array then it adds employee to number of count
+                jobtitleUpdate(jobtitleArray.get(i)); //if jobtitle already exists in array then it adds employee to number of count
             }
         }
     }
