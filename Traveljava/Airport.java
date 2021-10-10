@@ -4,7 +4,12 @@ import java.util.List;
 public class Airport {
     public static void main(String[] args) throws Exception {
 
-        List<String> places = Arrays.asList("Lebanon","Dubai","London","Canada","Mexico");
+        List<Place> places = Arrays.asList(
+            new Place("Lebanon"),
+            new Place("Dubai"),
+            new Place("London"),
+            new Place("Canada"),
+            new Place("Mexico"));
         List<String> allergies = Arrays.asList("Pollen","Peanuts","Pets","Food","Latex");
 
         List<Person> people = Arrays.asList(

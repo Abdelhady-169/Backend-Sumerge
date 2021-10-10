@@ -4,6 +4,11 @@ public abstract class Place {
     //simillar to a location parent object
 
    private String officeName;
+   private String location;
+
+   public Place(String name){
+    this.location = name;
+}
 
    public abstract void displaySeen(Person PersonArrived);
    
